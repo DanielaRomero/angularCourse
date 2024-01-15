@@ -1,7 +1,8 @@
-interface Product {
+export interface Product {
     description: string,
     price: number,
 }
+/*
 const phone: Product ={
     description: 'Nokia A1',
     price: 250.0
@@ -9,7 +10,7 @@ const phone: Product ={
 const tablet:Product = {
     description: "iPad Air",
     price: 250.0
-}
+}*/
 
 //DESESTRUCTURACION
 
@@ -27,7 +28,7 @@ interface TaxCalculationOptions {
 //Tambien se puede desestruturar en los parametros en lugar de options: TaxCalculationOptions, se utiliza
 // ({description, price})
 
-function taxCalculation( options: TaxCalculationOptions ): [number, number]{
+export function taxCalculation( options: TaxCalculationOptions ): [number, number]{
     const { tax, products} = options;
     
     let total = 0;
@@ -38,9 +39,9 @@ function taxCalculation( options: TaxCalculationOptions ): [number, number]{
     })
     return [total, total * tax];
 }
-
+/*
 const shoppingCart = [phone, tablet];
-const tax = 0.15;
+export const tax = 0.15;
 
 const [total, totalTax] = taxCalculation({
     products: shoppingCart,
@@ -50,4 +51,4 @@ const [total, totalTax] = taxCalculation({
 console.log('Total', total);
 console.log('Tax: ', totalTax);
 
-export{}
+*/
