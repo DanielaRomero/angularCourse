@@ -13,10 +13,6 @@ const tablet:Product = {
 
 //DESESTRUCTURACION
 
-const {description: phoneDescription, price: phonePrice} = phone;
-console.log( 'Description: ', phoneDescription);
-const {description: tabletDescription, price: tabletPrice} = tablet;
-console.log( 'Price: ', tabletPrice);
 // Una funcion tiene maximo 3 argumentos, en el caso que tenga mas se recomienda
 // crear un objeto
 
@@ -28,14 +24,19 @@ interface TaxCalculationOptions {
 // Podemos especificar cuando el retorno de una funcion es definido, es decir, en lugar de
 // regresar number[], regresamos [number, number]
 
+//Tambien se puede desestruturar en los parametros en lugar de options: TaxCalculationOptions, se utiliza
+// ({description, price})
+
 function taxCalculation( options: TaxCalculationOptions ): [number, number]{
+    const { tax, products} = options;
+    
     let total = 0;
     // Dentro de uuna funcion flecha se puede desestructurar
     // products -> ({price}) es la desestructuracion para solo tener el precio
-    options.products.forEach(({ price }) => {
+    products.forEach(({ price }) => {
         total += price;
     })
-    return [total, total * options.tax];
+    return [total, total * tax];
 }
 
 const shoppingCart = [phone, tablet];

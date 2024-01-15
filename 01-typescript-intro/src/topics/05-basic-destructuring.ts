@@ -32,7 +32,7 @@ console.log('Duration: ', duration);
 //Desestructuracion de DETAILS, puede realizarse en la primera constante
 
 const { author } = details;
-//console.log('Author: ', name);
+console.log('Author: ', author);
 //console.log('Year: ', release);
 
 // DESESTRUCTURACION DE ARREGLOS
