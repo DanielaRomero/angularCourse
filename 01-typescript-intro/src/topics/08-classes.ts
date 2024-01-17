@@ -14,7 +14,7 @@ export class Person {
     }
 
 }
-
+/*
 export class Hero extends Person{
     // Extender funciona para acarrear lo que la clase anterior tiene
     // Anade una clase extra de complejidad
@@ -27,9 +27,27 @@ export class Hero extends Person{
 
         super(realName, 'New York');
     }
+}*/
+
+// Como clase compuesta
+export class Hero {
+    
+    //public person: Person;
+
+    constructor(
+        public alterEgo: string,
+        public age: number,
+        public realName: string,
+        public person: Person,
+    ){
+        // Super es una funcion especial para llamar el constructor del padre
+
+        //this.person = new Person(realName);
+    }
 }
 
 // Al crear ironman del tipo Hero, en la appweb cambia a Hero en lugar de Person
-const ironman = new Hero('Ironman', 45, 'Tony');
+const tony = new Person('Tony Strak', 'New York');
+const ironman = new Hero('Ironman', 45, 'Tony',tony);
 
 console.log(ironman);
