@@ -1,0 +1,16 @@
+Para crear un nuevo componente utilizamos AngularCLI y el comando
+
+ng g c direccion?/nombre
+
+El comando crea los componentes:
+
+  * html
+  * css
+  * ts
+  * spect.ts -> Es para realiar las pruebas
+
+Y actualiza automaticamente la carpeta module de la aplicacion
+
+Para eliminar un componente con el AngularCLI se debe eliminar todos los
+componentes que se crean y las referencias que existen en otros archivos
+del aplicativo.
