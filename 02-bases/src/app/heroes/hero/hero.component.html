@@ -3,23 +3,23 @@
 
 <dl>
   <td>Nombre:</td>
-  <dd>{{name}}</dd>
+  <dd>{{ name }}</dd>
 
   <td>Edad:</td>
-  <dd>{{age}}</dd>
+  <dd>{{ age }}</dd>
 
   <td>Metodo:</td>
-  <dd>nombre</dd>
+  <dd>{{ getHeroDescription() }}</dd>
 
   <td>Capitalizado:</td>
-  <dd>capitalizado</dd>
+  <dd>{{getCapitalizedName}}</dd>
 
 </dl>
 
-<button class="btn btn-primary mx-2">
+<button class="btn btn-primary mx-2" (click)="changeHero()">
   Cambiar nombre
 </button>
 
-<button class="btn btn-primary">
+<button class="btn btn-primary" (click)="changeAge()">
   Cambiar edad
 </button>
