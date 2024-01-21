@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { AppComponent } from "../app.component";
 
 // Una clase se convierte en componente cuando se utiliza el decorador
 // Component desde Angular/Core

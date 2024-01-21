@@ -7,15 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  public name: string = 'ironman';
+  public name: string = 'Ironman';
   public age: number = 45;
 
   get getCapitalizedName(){
     return this.name.toLocaleUpperCase();
-  }
-
-  set setCapitalizedName(name: string){
-
   }
 
   getHeroDescription():string{
@@ -29,13 +25,9 @@ export class HeroComponent {
   changeAge( newAge: number = 26):void {
     this.age = newAge;
   }
+
   resetForm (): void{
     this.name = 'Ironman';
     this.age = 45;
-
-
-    document.querySelectorAll('h1').forEach(element =>{
-      element.innerHTML = '<h1>Desde Angular</h1>';
-    })
   }
 }
